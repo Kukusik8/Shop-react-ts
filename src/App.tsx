@@ -1,18 +1,18 @@
-import React, {createElement as e} from 'react';
+import React,{useState} from 'react';
+import {Product} from './components/Product'
+import { products } from "./components/data/products";
+
 
 
 function App() {
-  // return (
-   
-  // );
-return e ('div',{className:'container'},[
-  e('h1',{className:'font-bold',key:1},'Test'),
-  e('button',{
-    className:'py-2 px-4 border',
-    key:2,
-    onClick:()=>console.log('clicked')
-  },'Click me')
-])
+ 
+
+return (
+  <div className="container mx-auto max-w-2xl pt-5">
+<Product product={products[0]}/>
+<Product product={products[1]}/>
+  </div>
+  )
 }
 
 
