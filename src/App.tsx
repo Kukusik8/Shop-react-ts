@@ -1,8 +1,9 @@
-import React from 'react'
+
 import {Product} from './components/Product'
 import { useProducts } from './hooks/products';
 import { Loader } from './components/Loader';
 import { Error } from './components/Error';
+import { Modal } from './components/Modal';
 
 function App() {
  
@@ -13,7 +14,7 @@ return (
     {loading && <Loader/>}
     {error && <Error error={error}/>}
   {products.map(product => <Product product={product} key={product.id}/>)}
-
+  <Modal/>
   </div>
   )
 }
